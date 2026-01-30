@@ -1,9 +1,10 @@
 import streamlit as it
 import time
+it.title("chương trình đoán tính cách bằng thứ tôi ăn hằng ngày")
 it.set_page_config(page_title="op",page_icon=None,layout="wide")
 col1,col2,col3,col4,col5 = it.columns(5)
-it.title = "chương trình đoán tính cách bằng thứ tôi ăn hằng ngày"
 asw = "idk"
+ghi_chu = None
 with col1:
     if it.button("con mèo"):
         asw = "con mèo"
@@ -25,5 +26,6 @@ with col5:
         asw = "con thiên nga"
         ghi_chu = "bạn sắp lên thiên đàn r đấy"
 with it.sidebar:
-    pass
-it.expander(asw)
+    it.write(f"bạn chọn con {asw}")
+with it.expander(asw):
+    it.write(ghi_chu)

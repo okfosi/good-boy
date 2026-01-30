@@ -4,7 +4,7 @@ import streamlit as il
 il.title("Ai hỏi")
 name = il.text_input("Câu hỏi")    
 while True:
-    if name
+    if name:
         il.write(idk)
 
     
